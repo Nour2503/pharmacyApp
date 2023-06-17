@@ -1,0 +1,6 @@
+CREATE TABLE admin (id int(10) NOT NULL AUTO_INCREMENT, userName varchar(255), password varchar(255), PRIMARY KEY (id), UNIQUE INDEX (id));
+CREATE TABLE branche (name varchar(255) NOT NULL, location varchar(255), PRIMARY KEY (name));
+CREATE TABLE drug (id int(11) NOT NULL AUTO_INCREMENT, name varchar(255), price int(10), expireDate int(10), descreption varchar(255), branchename varchar(255) NOT NULL, adminid int(10) NOT NULL, PRIMARY KEY (id), UNIQUE INDEX (id));
+CREATE TABLE question (Fname varchar(255), Lname varchar(255), phoneNumber int(10), question varchar(255));
+ALTER TABLE drug ADD CONSTRAINT FKdrug876703 FOREIGN KEY (adminid) REFERENCES admin (id);
+ALTER TABLE drug ADD CONSTRAINT FKdrug267150 FOREIGN KEY (branchename) REFERENCES branche (name);

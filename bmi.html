@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator with JavaScript</title>
+    <script src="script.js" defer></script>
+    <style>
+        body{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #83a4d4, #b6fbff);
+}
+span{
+    color: red;
+}
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    padding: 15px;
+    width: 50%;
+    background: black;
+    border-radius: 5px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+input{
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+button{
+    color: white;
+    padding: 10px;
+    border: 2px solid white;
+    background: black;
+    display: block;
+    margin-top: 10%;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <p>Height in CM:
+            <input type="text" id="height"><br><span id="height_error"></span>
+        </p>
+
+        <p>Weight in KG:
+            <input type="text" id="weight"><br><span id="weight_error"></span>
+        </p>
+
+        <button id="btn">Calculate</button>
+        <p id="output"></p>
+    </div>
+</body>
+</html>
